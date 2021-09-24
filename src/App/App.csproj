@@ -1,0 +1,1093 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(SolutionDir)\Uwp.props" />
+  <PropertyGroup>
+    <ProjectGuid>{1C288BC0-72F3-4C4C-90AD-A05B52E937B0}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <RootNamespace>Richasy.Bili.App</RootNamespace>
+    <AssemblyName>GodLeaveMe</AssemblyName>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+    <AppxOSMaxVersionTestedReplaceManifestVersion>false</AppxOSMaxVersionTestedReplaceManifestVersion>
+    <DisableStackTraceMetadata>true</DisableStackTraceMetadata>
+    <DisableExceptionMessages>true</DisableExceptionMessages>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <TargetPlatformMinVersion>10.0.18362.0</TargetPlatformMinVersion>
+    <Use64BitCompiler>true</Use64BitCompiler>
+    <ShortcutGenericAnalysis>true</ShortcutGenericAnalysis>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA512</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxPackageDir>D:\Package\BilibiliUWP</AppxPackageDir>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64</AppxBundlePlatforms>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <PackageCertificateKeyFile>
+    </PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>9B21EB6C368EBB96530A5A3EEF83D14562088DEB</PackageCertificateThumbprint>
+    <TargetPlatformVersion>10.0.22000.0</TargetPlatformVersion>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(SolutionDir)\src\Shared\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controls\App\TipPopup.xaml.cs">
+      <DependentUpon>TipPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\TwoLineButton\TwoLineButton.cs" />
+    <Compile Include="Controls\App\CenterPopup\CenterPopup.cs" />
+    <Compile Include="Controls\App\CenterPopup\CenterPopup.Properties.cs" />
+    <Compile Include="Controls\Danmaku\DanmakuSendOptions.xaml.cs">
+      <DependentUpon>DanmakuSendOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IRefreshPage.cs" />
+    <Compile Include="Controls\Message\AtMessageView.xaml.cs">
+      <DependentUpon>AtMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Message\AtMessageItem.xaml.cs">
+      <DependentUpon>AtMessageItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dynamic\DynamicItem.xaml.cs">
+      <DependentUpon>DynamicItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dynamic\DynamicPgcItem.xaml.cs">
+      <DependentUpon>DynamicPgcItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dynamic\DynamicVideoItem.xaml.cs">
+      <DependentUpon>DynamicVideoItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Favorite\ArticleFavoritePanel.xaml.cs">
+      <DependentUpon>ArticleFavoritePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Dialogs\ConfirmDialog.xaml.cs">
+      <DependentUpon>ConfirmDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Favorite\FavoriteVideoView.xaml.cs">
+      <DependentUpon>FavoriteVideoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Favorite\FavoriteComponent.cs" />
+    <Compile Include="Controls\Favorite\PgcFavoritePanel.xaml.cs">
+      <DependentUpon>PgcFavoritePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Message\LikeMessageItem.xaml.cs">
+      <DependentUpon>LikeMessageItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Message\LikeMessageView.xaml.cs">
+      <DependentUpon>LikeMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Message\MessageComponent.cs" />
+    <Compile Include="Controls\Pgc\PgcDetailView.xaml.cs">
+      <DependentUpon>PgcDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Pgc\PgcPlayListView.xaml.cs">
+      <DependentUpon>PgcPlayListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\Related\PlayerReplyView.xaml.cs">
+      <DependentUpon>PlayerReplyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ReplyItem.xaml.cs">
+      <DependentUpon>ReplyItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ReplyView.xaml.cs">
+      <DependentUpon>ReplyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ReplyDetailView.xaml.cs">
+      <DependentUpon>ReplyDetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\TrimTextBlock.xaml.cs">
+      <DependentUpon>TrimTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ReaderView.xaml.cs">
+      <DependentUpon>ReaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\StaggeredLayout\StaggeredColumnLayout.cs" />
+    <Compile Include="Controls\App\StaggeredLayout\StaggeredItem.cs" />
+    <Compile Include="Controls\App\StaggeredLayout\StaggeredLayout.cs" />
+    <Compile Include="Controls\App\StaggeredLayout\StaggeredLayoutState.cs" />
+    <Compile Include="Controls\Message\ReplyMessageItem.xaml.cs">
+      <DependentUpon>ReplyMessageItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Message\ReplyMessageView.xaml.cs">
+      <DependentUpon>ReplyMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\QuestionPanel.xaml.cs">
+      <DependentUpon>QuestionPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\ReplyModuleView.xaml.cs">
+      <DependentUpon>ReplyModuleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\AccountPanel.xaml.cs">
+      <DependentUpon>AccountPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\BubbleView\Bubble.cs" />
+    <Compile Include="Controls\App\BubbleView\BubbleView.cs" />
+    <Compile Include="Controls\App\BubbleView\BubbleView.Properties.cs" />
+    <Compile Include="Controls\App\CommonImageEx.xaml.cs">
+      <DependentUpon>CommonImageEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Danmaku\DanmakuBox.xaml.cs">
+      <DependentUpon>DanmakuBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Danmaku\DanmakuView\DanmakuView.cs" />
+    <Compile Include="Controls\Danmaku\DanmakuBuilder.cs" />
+    <Compile Include="Controls\Danmaku\DanmakuModel.cs" />
+    <Compile Include="Controls\Danmaku\DanmakuView\DanmakuView.Methods.cs" />
+    <Compile Include="Controls\Danmaku\DanmakuView\DanmakuView.Properties.cs" />
+    <Compile Include="Controls\Danmaku\DanmakuDisplayOptions.xaml.cs">
+      <DependentUpon>DanmakuDisplayOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\BiliPlayerTransportControls\BiliPlayerTransportControls.cs" />
+    <Compile Include="Controls\Player\BiliPlayerTransportControls\BiliPlayerTransportControls.Properties.cs" />
+    <Compile Include="Controls\Player\BiliPlayer\BiliPlayer.cs" />
+    <Compile Include="Controls\Player\BiliPlayer\BiliPlayer.Properties.cs" />
+    <Compile Include="Controls\App\CardPanel\CardPanel.Fields.cs" />
+    <Compile Include="Controls\App\CardPanel\CardPanel.Properties.cs" />
+    <Compile Include="Controls\App\CardPanel\CardPanelAutomationPeer.cs" />
+    <Compile Include="Controls\App\CardPanel\CardPanelStateChangedEventArgs.cs" />
+    <Compile Include="Controls\Common\ArticleItem.xaml.cs">
+      <DependentUpon>ArticleItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\HorizontalRepeaterView.xaml.cs">
+      <DependentUpon>HorizontalRepeaterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\OverlayLoadingPanel.xaml.cs">
+      <DependentUpon>OverlayLoadingPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\IDynamicLayoutItem.cs" />
+    <Compile Include="Controls\IRepeaterItem.cs" />
+    <Compile Include="Controls\Live\FollowLiveItem.xaml.cs">
+      <DependentUpon>FollowLiveItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Live\FollowLiveView.xaml.cs">
+      <DependentUpon>FollowLiveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Pgc\PgcItem.xaml.cs">
+      <DependentUpon>PgcItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\PlayerDashboard.xaml.cs">
+      <DependentUpon>PlayerDashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\PlayerComponent.cs" />
+    <Compile Include="Controls\Player\PlayerDescriptor.xaml.cs">
+      <DependentUpon>PlayerDescriptor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\PlayerRelatedView.xaml.cs">
+      <DependentUpon>PlayerRelatedView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\ProgressButton\ProgressButton.cs" />
+    <Compile Include="Controls\Player\Related\EpisodeView.xaml.cs">
+      <DependentUpon>EpisodeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\Related\LiveMessageView.xaml.cs">
+      <DependentUpon>LiveMessageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\Related\PgcSectionView.xaml.cs">
+      <DependentUpon>PgcSectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\Related\RelatedVideoView.xaml.cs">
+      <DependentUpon>RelatedVideoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\Related\SeasonView.xaml.cs">
+      <DependentUpon>SeasonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Player\Related\VideoPartView.xaml.cs">
+      <DependentUpon>VideoPartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchSuggestBox.xaml.cs">
+      <DependentUpon>SearchSuggestBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchArticleFilter.xaml.cs">
+      <DependentUpon>SearchArticleFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchArticleView.xaml.cs">
+      <DependentUpon>SearchArticleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchComponent.cs" />
+    <Compile Include="Controls\Search\SearchLiveView.xaml.cs">
+      <DependentUpon>SearchLiveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchPgcView.xaml.cs">
+      <DependentUpon>SearchPgcView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchUserFilter.xaml.cs">
+      <DependentUpon>SearchUserFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchUserView.xaml.cs">
+      <DependentUpon>SearchUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchVideoFilter.xaml.cs">
+      <DependentUpon>SearchVideoFilter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Search\SearchVideoView.xaml.cs">
+      <DependentUpon>SearchVideoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\MTCSettingSection.xaml.cs">
+      <DependentUpon>MTCSettingSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\PlayerControlSettingSection.xaml.cs">
+      <DependentUpon>PlayerControlSettingSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\PlayerModeSettingSection.xaml.cs">
+      <DependentUpon>PlayerModeSettingSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\LoggerSettingSection.xaml.cs">
+      <DependentUpon>LoggerSettingSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\SettingSectionControl.cs" />
+    <Compile Include="Controls\Settings\StartupSettingSection.xaml.cs">
+      <DependentUpon>StartupSettingSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Settings\ThemeSettingSection.xaml.cs">
+      <DependentUpon>ThemeSettingSection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\UserSlimCard.xaml.cs">
+      <DependentUpon>UserSlimCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\AccountAvatar.xaml.cs">
+      <DependentUpon>AccountAvatar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Banner\BannerItem\BannerItem.cs" />
+    <Compile Include="Controls\Banner\BannerView.xaml.cs">
+      <DependentUpon>BannerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\CardPanel\CardPanel.cs" />
+    <Compile Include="Controls\App\ErrorPanel.xaml.cs">
+      <DependentUpon>ErrorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\IconTextBlock.xaml.cs">
+      <DependentUpon>IconTextBlock.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\AppTitleBar.xaml.cs">
+      <DependentUpon>AppTitleBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\PartitionItem.xaml.cs">
+      <DependentUpon>PartitionItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\App\OffsetButton\OffsetButton.cs" />
+    <Compile Include="Controls\App\RootNavigationView.xaml.cs">
+      <DependentUpon>RootNavigationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\VideoItem.xaml.cs">
+      <DependentUpon>VideoItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\VerticalRepeaterView.xaml.cs">
+      <DependentUpon>VerticalRepeaterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\User\UserAvatar.xaml.cs">
+      <DependentUpon>UserAvatar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Favorite\VideoFavoritePanel.xaml.cs">
+      <DependentUpon>VideoFavoritePanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VisualExtensions.cs" />
+    <Compile Include="Pages\Overlay\FansPage.xaml.cs">
+      <DependentUpon>FansPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\FavoritePage.xaml.cs">
+      <DependentUpon>FavoritePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\FollowsPage.xaml.cs">
+      <DependentUpon>FollowsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\HistoryPage.xaml.cs">
+      <DependentUpon>HistoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\MessagePage.xaml.cs">
+      <DependentUpon>MessagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\PlayerPage.xaml.cs">
+      <DependentUpon>PlayerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\PgcIndexPage.xaml.cs">
+      <DependentUpon>PgcIndexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\TimeLinePage.xaml.cs">
+      <DependentUpon>TimeLinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reuse\AnimePage.xaml.cs">
+      <DependentUpon>AnimePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DocumentaryPage.xaml.cs">
+      <DependentUpon>DocumentaryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DomesticAnimePage.xaml.cs">
+      <DependentUpon>DomesticAnimePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DynamicFeedPage.xaml.cs">
+      <DependentUpon>DynamicFeedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BangumiPage.xaml.cs">
+      <DependentUpon>BangumiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Reuse\FeedPage.xaml.cs">
+      <DependentUpon>FeedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HelpPage.xaml.cs">
+      <DependentUpon>HelpPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PopularPage.xaml.cs">
+      <DependentUpon>PopularPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RecommendPage.xaml.cs">
+      <DependentUpon>RecommendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IConnectedAnimationPage.cs" />
+    <Compile Include="Pages\LivePage.xaml.cs">
+      <DependentUpon>LivePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MoviePage.xaml.cs">
+      <DependentUpon>MoviePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\PartitionDetailPage.xaml.cs">
+      <DependentUpon>PartitionDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PartitionPage.xaml.cs">
+      <DependentUpon>PartitionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RankPage.xaml.cs">
+      <DependentUpon>RankPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RootPage.xaml.cs">
+      <DependentUpon>RootPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overlay\ViewLaterPage.xaml.cs">
+      <DependentUpon>ViewLaterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SettingPage.xaml.cs">
+      <DependentUpon>SettingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SpecialColumnPage.xaml.cs">
+      <DependentUpon>SpecialColumnPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TVPage.xaml.cs">
+      <DependentUpon>TVPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Converter\BoolToVisibilityConverter.cs" />
+    <Compile Include="Resources\Converter\ColorConverter.cs" />
+    <Compile Include="Resources\Converter\DanmakuLocationConverter.cs" />
+    <Compile Include="Resources\Converter\DanmakuStyleConverter.cs" />
+    <Compile Include="Resources\Converter\DurationConverter.cs" />
+    <Compile Include="Resources\Converter\EpisodeCoverConverter.cs" />
+    <Compile Include="Resources\Converter\EpisodeTitleConverter.cs" />
+    <Compile Include="Resources\Converter\FavoriteTypeConverter.cs" />
+    <Compile Include="Resources\Converter\NumberToVisibilityConverter.cs" />
+    <Compile Include="Resources\Converter\PgcFollowTextConverter.cs" />
+    <Compile Include="Resources\Converter\MTCControlModeConverter.cs" />
+    <Compile Include="Resources\Converter\PlayerDisplayModeConverter.cs" />
+    <Compile Include="Resources\Converter\PreferCodecConverter.cs" />
+    <Compile Include="Resources\Converter\SeasonCoverConverter.cs" />
+    <Compile Include="Resources\Converter\SortTypeTextConverter.cs" />
+    <Compile Include="Resources\Converter\ObjectToBoolConverter.cs" />
+    <Compile Include="Resources\Converter\ObjectToVisibilityConverter.cs" />
+    <Compile Include="Resources\Converter\ThemeStringConverter.cs" />
+    <Compile Include="Resources\Converter\UserLevelConverter.cs" />
+    <Compile Include="Resources\Extension\BasicExtension.cs" />
+    <Compile Include="Resources\Extension\ConnectedAnimationExtension.cs" />
+    <Compile Include="Resources\Extension\DanmakuModelComparer.cs" />
+    <Compile Include="Resources\Extension\NavigationExtension.cs" />
+    <Compile Include="Resources\Extension\VisualTreeExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Bili_rgba_80.png" />
+    <Content Include="Assets\Bili_rgba_25.png" />
+    <Content Include="Assets\Bili_rgba_500.png" />
+    <Content Include="Assets\DashVideoTemplate.xml" />
+    <Content Include="Assets\ERROR_rgba.png" />
+    <Content Include="Assets\Level\level_0.png" />
+    <Content Include="Assets\Level\level_1.png" />
+    <Content Include="Assets\Level\level_2.png" />
+    <Content Include="Assets\Level\level_3.png" />
+    <Content Include="Assets\Level\level_4.png" />
+    <Content Include="Assets\Level\level_5.png" />
+    <Content Include="Assets\Level\level_6.png" />
+    <Content Include="Assets\Logo\LargeTile.scale-100.png" />
+    <Content Include="Assets\Logo\LargeTile.scale-125.png" />
+    <Content Include="Assets\Logo\LargeTile.scale-150.png" />
+    <Content Include="Assets\Logo\LargeTile.scale-200.png" />
+    <Content Include="Assets\Logo\LargeTile.scale-400.png" />
+    <Content Include="Assets\Logo\SmallTile.scale-100.png" />
+    <Content Include="Assets\Logo\SmallTile.scale-125.png" />
+    <Content Include="Assets\Logo\SmallTile.scale-150.png" />
+    <Content Include="Assets\Logo\SmallTile.scale-200.png" />
+    <Content Include="Assets\Logo\SmallTile.scale-400.png" />
+    <Content Include="Assets\Logo\SplashScreen.scale-100.png" />
+    <Content Include="Assets\Logo\SplashScreen.scale-125.png" />
+    <Content Include="Assets\Logo\SplashScreen.scale-150.png" />
+    <Content Include="Assets\Logo\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Logo\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Logo\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Logo\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Logo\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Logo\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Logo\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-unplated_targetsize-24.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Logo\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\Logo\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Logo\StoreLogo.scale-125.png" />
+    <Content Include="Assets\Logo\StoreLogo.scale-150.png" />
+    <Content Include="Assets\Logo\StoreLogo.scale-200.png" />
+    <Content Include="Assets\Logo\StoreLogo.scale-400.png" />
+    <Content Include="Assets\Logo\Wide310x150Logo.scale-100.png" />
+    <Content Include="Assets\Logo\Wide310x150Logo.scale-125.png" />
+    <Content Include="Assets\Logo\Wide310x150Logo.scale-150.png" />
+    <Content Include="Assets\Logo\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\Logo\Wide310x150Logo.scale-400.png" />
+    <Content Include="Assets\Null_rgba.png" />
+    <Content Include="Assets\Original_rgba_80.png" />
+    <Content Include="Assets\Rookie_rgba_80.png" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Resources\Html\Dark.css" />
+    <Content Include="Resources\Html\Light.css" />
+    <Content Include="Resources\Html\ReaderPage.html" />
+    <Content Include="Resources\Misc\Update.en_US.txt" />
+    <Content Include="Resources\Misc\Update.zh_CN.txt" />
+    <Content Include="$(SolutionDir)\ffmpeg\*.dll" />
+  </ItemGroup>
+  <Choose>
+    <When Condition=" '$(Platform)' == 'x86' ">
+      <ItemGroup>
+        <Content Include="$(SolutionDir)\ffmpeg\x86\*.dll" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Platform)' == 'x64' ">
+      <ItemGroup>
+        <Content Include="$(SolutionDir)\ffmpeg\x64\*.dll" />
+      </ItemGroup>
+    </When>
+    <When Condition=" '$(Platform)' == 'ARM64' ">
+      <ItemGroup>
+        <Content Include="$(SolutionDir)\ffmpeg\ARM64\*.dll" />
+      </ItemGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="Controls\App\CenterPopup\CenterPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\TipPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\TwoLineButton\TwoLineButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Danmaku\DanmakuSendOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Message\AtMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Message\AtMessageItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dynamic\DynamicItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dynamic\DynamicPgcItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dynamic\DynamicVideoItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Favorite\ArticleFavoritePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Dialogs\ConfirmDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Favorite\FavoriteVideoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Favorite\PgcFavoritePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Message\LikeMessageItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Message\LikeMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Pgc\PgcDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Pgc\PgcPlayListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\Related\PlayerReplyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ReplyItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ReplyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ReplyDetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\TrimTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ReaderView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Message\ReplyMessageItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Message\ReplyMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\QuestionPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ReplyModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\User\AccountPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\AppTitleBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\OffsetButton\OffsetButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\BubbleView\BubbleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\CommonImageEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Danmaku\DanmakuBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Danmaku\DanmakuView\DanmakuView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Danmaku\DanmakuDisplayOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\BiliPlayerTransportControls\BiliPlayerTransportControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\BiliPlayer\BiliPlayer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\ArticleItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\HorizontalRepeaterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\OverlayLoadingPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Live\FollowLiveItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Live\FollowLiveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Pgc\PgcItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\PlayerDashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\PlayerDescriptor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\PlayerRelatedView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\ProgressButton\ProgressButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\Related\EpisodeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\Related\LiveMessageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\Related\PgcSectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\Related\RelatedVideoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\Related\SeasonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Player\Related\VideoPartView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchSuggestBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchArticleFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchArticleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchLiveView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchPgcView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchUserFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchUserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchVideoFilter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Search\SearchVideoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Settings\MTCSettingSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Settings\PlayerControlSettingSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Settings\PlayerModeSettingSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Settings\LoggerSettingSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Settings\StartupSettingSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Settings\ThemeSettingSection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\User\UserSlimCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\User\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\User\AccountAvatar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Banner\BannerItem\BannerItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Banner\BannerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\PartitionItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\CardPanel\CardPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\ErrorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\IconTextBlock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\App\RootNavigationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\VideoItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Common\VerticalRepeaterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\User\UserAvatar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Favorite\VideoFavoritePanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\FansPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\FavoritePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\FollowsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\HistoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\MessagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\PlayerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\SearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\PgcIndexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\TimeLinePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Reuse\AnimePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DocumentaryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DomesticAnimePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\DynamicFeedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\BangumiPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Reuse\FeedPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\HelpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PopularPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RecommendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LivePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MoviePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Overlay\PartitionDetailPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PartitionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RankPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RootPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Overlay\ViewLaterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SettingPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SpecialColumnPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TVPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Style.Dimensions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Style.Overwrite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Theme.Dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Styles\Theme.HighContrast.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Theme.Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FFmpegInteropX">
+      <Version>0.9.2</Version>
+    </PackageReference>
+    <PackageReference Include="HN.Controls.ImageEx.Uwp">
+      <Version>1.0.33</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.Metrics">
+      <Version>3.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.12</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI">
+      <Version>7.1.0-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Animations">
+      <Version>7.1.0-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Controls">
+      <Version>7.1.0-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Uwp.UI.Media">
+      <Version>7.1.0-rc2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.UI.Xaml">
+      <Version>2.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Nito.AsyncEx.Tasks">
+      <Version>5.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Richasy.ExpanderEx.UWP">
+      <Version>1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Richasy.FluentIcon.Regular.UWP">
+      <Version>1.1.135</Version>
+    </PackageReference>
+    <PackageReference Include="Richasy.SYEnginePackage">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="StyleCop.Analyzers">
+      <Version>1.1.118</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Win2D.uwp">
+      <Version>1.26.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="Resources\Strings\zh-CN\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.Uwp\Controller.Uwp.csproj">
+      <Project>{5213E830-43F5-491E-A8EF-D75083578EF3}</Project>
+      <Name>Controller.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.App\Models.App.csproj">
+      <Project>{9e61cc56-43f9-489c-aaaf-bd5ec69367c4}</Project>
+      <Name>Models.App</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.BiliBili\Models.BiliBili.csproj">
+      <Project>{8776a0bd-dbd1-4f11-a022-400d044ff618}</Project>
+      <Name>Models.BiliBili</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.Enums\Models.Enums.csproj">
+      <Project>{88314412-b020-415b-aeab-57adc43b273e}</Project>
+      <Name>Models.Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.gRPC\Models.gRPC.csproj">
+      <Project>{0187840F-8D1A-4198-B5BF-8B05CADB4554}</Project>
+      <Name>Models.gRPC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Locator\Locator.Uwp\Locator.Uwp.csproj">
+      <Project>{793ec923-d704-4c6f-9506-eb6a32bfbb8d}</Project>
+      <Name>Locator.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Toolkit\Toolkit.Interfaces\Toolkit.Interfaces.csproj">
+      <Project>{ca4fe39c-2379-4966-9940-de738d94e982}</Project>
+      <Name>Toolkit.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Toolkit\Toolkit.Uwp\Toolkit.Uwp.csproj">
+      <Project>{07b6d3b7-0ac0-489b-bf27-588ab6226b1c}</Project>
+      <Name>Toolkit.Uwp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewModels\ViewModels.Uwp\ViewModels.Uwp.csproj">
+      <Project>{1af20fdc-36d5-450e-9461-0f78aeb89716}</Project>
+      <Name>ViewModels.Uwp</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Misc\Question.CHS.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_TemporaryKey.pfx" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
